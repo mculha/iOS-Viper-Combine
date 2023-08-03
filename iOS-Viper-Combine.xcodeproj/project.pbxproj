@@ -18,6 +18,7 @@
 		E96C3C5E2A7C4A100032F7A1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C5D2A7C4A100032F7A1 /* Presenter.swift */; };
 		E96C3C602A7C4A4C0032F7A1 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C5F2A7C4A4C0032F7A1 /* Interactor.swift */; };
 		E96C3C622A7C4A600032F7A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C612A7C4A600032F7A1 /* Router.swift */; };
+		E96C3C652A7C4CFB0032F7A1 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = E96C3C642A7C4CFB0032F7A1 /* CombineMoya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96C3C652A7C4CFB0032F7A1 /* CombineMoya in Frameworks */,
 				75E0ADE4B30AFAC998520D91 /* Pods_iOS_Viper_Combine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +170,9 @@
 			dependencies = (
 			);
 			name = "iOS-Viper-Combine";
+			packageProductDependencies = (
+				E96C3C642A7C4CFB0032F7A1 /* CombineMoya */,
+			);
 			productName = "iOS-Viper-Combine";
 			productReference = E9584C492A78533900267C47 /* iOS-Viper-Combine.app */;
 			productType = "com.apple.product-type.application";
@@ -196,6 +201,9 @@
 				Base,
 			);
 			mainGroup = E9584C402A78533900267C47;
+			packageReferences = (
+				E96C3C632A7C4CFB0032F7A1 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = E9584C4A2A78533900267C47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -481,6 +489,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E96C3C632A7C4CFB0032F7A1 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E96C3C642A7C4CFB0032F7A1 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E96C3C632A7C4CFB0032F7A1 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9584C412A78533900267C47 /* Project object */;
 }
