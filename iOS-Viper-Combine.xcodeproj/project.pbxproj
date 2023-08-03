@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75E0ADE4B30AFAC998520D91 /* Pods_iOS_Viper_Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F01E310A5A0417796E305C5 /* Pods_iOS_Viper_Combine.framework */; };
 		E9584C4D2A78533900267C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584C4C2A78533900267C47 /* AppDelegate.swift */; };
 		E9584C4F2A78533900267C47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584C4E2A78533900267C47 /* SceneDelegate.swift */; };
 		E9584C512A78533900267C47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584C502A78533900267C47 /* ViewController.swift */; };
 		E9584C542A78533900267C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9584C522A78533900267C47 /* Main.storyboard */; };
 		E9584C562A78533A00267C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9584C552A78533A00267C47 /* Assets.xcassets */; };
 		E9584C592A78533A00267C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9584C572A78533A00267C47 /* LaunchScreen.storyboard */; };
+		E96C3C5C2A7C46940032F7A1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C5B2A7C46940032F7A1 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F01E310A5A0417796E305C5 /* Pods_iOS_Viper_Combine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Viper_Combine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA7C10989D35839EEF606C9C /* Pods-iOS-Viper-Combine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Viper-Combine.release.xcconfig"; path = "Target Support Files/Pods-iOS-Viper-Combine/Pods-iOS-Viper-Combine.release.xcconfig"; sourceTree = "<group>"; };
+		D22CD9286DFA20DE05B42580 /* Pods-iOS-Viper-Combine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Viper-Combine.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Viper-Combine/Pods-iOS-Viper-Combine.debug.xcconfig"; sourceTree = "<group>"; };
 		E9584C492A78533900267C47 /* iOS-Viper-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Viper-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9584C4C2A78533900267C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9584C4E2A78533900267C47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		E9584C552A78533A00267C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9584C582A78533A00267C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9584C5A2A78533A00267C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E96C3C5B2A7C46940032F7A1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E0ADE4B30AFAC998520D91 /* Pods_iOS_Viper_Combine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CC61AB92F38BA37A3A7382C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D22CD9286DFA20DE05B42580 /* Pods-iOS-Viper-Combine.debug.xcconfig */,
+				AA7C10989D35839EEF606C9C /* Pods-iOS-Viper-Combine.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E9584C402A78533900267C47 = {
 			isa = PBXGroup;
 			children = (
 				E9584C4B2A78533900267C47 /* iOS-Viper-Combine */,
 				E9584C4A2A78533900267C47 /* Products */,
+				1CC61AB92F38BA37A3A7382C /* Pods */,
+				F8DE53F705FE28643D13C689 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +75,72 @@
 		E9584C4B2A78533900267C47 /* iOS-Viper-Combine */ = {
 			isa = PBXGroup;
 			children = (
+				E96C3C582A7C465E0032F7A1 /* Base */,
+				E96C3C552A7C46450032F7A1 /* Scene */,
+				E96C3C572A7C46500032F7A1 /* Model */,
+				E96C3C562A7C464B0032F7A1 /* Network */,
+				E96C3C5A2A7C46880032F7A1 /* Utility */,
+				E96C3C592A7C466A0032F7A1 /* Resource */,
 				E9584C4C2A78533900267C47 /* AppDelegate.swift */,
 				E9584C4E2A78533900267C47 /* SceneDelegate.swift */,
 				E9584C502A78533900267C47 /* ViewController.swift */,
 				E9584C522A78533900267C47 /* Main.storyboard */,
-				E9584C552A78533A00267C47 /* Assets.xcassets */,
 				E9584C572A78533A00267C47 /* LaunchScreen.storyboard */,
 				E9584C5A2A78533A00267C47 /* Info.plist */,
 			);
 			path = "iOS-Viper-Combine";
+			sourceTree = "<group>";
+		};
+		E96C3C552A7C46450032F7A1 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		E96C3C562A7C464B0032F7A1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E96C3C572A7C46500032F7A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E96C3C582A7C465E0032F7A1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E96C3C592A7C466A0032F7A1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E9584C552A78533A00267C47 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E96C3C5A2A7C46880032F7A1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E96C3C5B2A7C46940032F7A1 /* Constant.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		F8DE53F705FE28643D13C689 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F01E310A5A0417796E305C5 /* Pods_iOS_Viper_Combine.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +150,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9584C5D2A78533A00267C47 /* Build configuration list for PBXNativeTarget "iOS-Viper-Combine" */;
 			buildPhases = (
+				1E518D24C63A27BC4C136649 /* [CP] Check Pods Manifest.lock */,
 				E9584C452A78533900267C47 /* Sources */,
 				E9584C462A78533900267C47 /* Frameworks */,
 				E9584C472A78533900267C47 /* Resources */,
@@ -133,6 +210,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E518D24C63A27BC4C136649 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-Viper-Combine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E9584C452A78533900267C47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +243,7 @@
 				E9584C512A78533900267C47 /* ViewController.swift in Sources */,
 				E9584C4D2A78533900267C47 /* AppDelegate.swift in Sources */,
 				E9584C4F2A78533900267C47 /* SceneDelegate.swift in Sources */,
+				E96C3C5C2A7C46940032F7A1 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +390,7 @@
 		};
 		E9584C5E2A78533A00267C47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D22CD9286DFA20DE05B42580 /* Pods-iOS-Viper-Combine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +419,7 @@
 		};
 		E9584C5F2A78533A00267C47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA7C10989D35839EEF606C9C /* Pods-iOS-Viper-Combine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

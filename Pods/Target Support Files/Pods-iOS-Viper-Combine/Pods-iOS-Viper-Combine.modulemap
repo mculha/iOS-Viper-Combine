@@ -1,0 +1,6 @@
+framework module Pods_iOS_Viper_Combine {
+  umbrella header "Pods-iOS-Viper-Combine-umbrella.h"
+
+  export *
+  module * { export * }
+}
