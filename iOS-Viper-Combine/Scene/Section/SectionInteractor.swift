@@ -6,12 +6,20 @@
 //
 
 import Foundation
+import Combine
+import Moya
 
 final class SectionInteractor: InteractorProtocol {
 
     weak var presenter: SectionPresenter?
+    private let service: SectionServiceProtocol
 
     init(presenter: SectionPresenter) {
         self.presenter = presenter
+        self.service = SectionService()
+    }
+    
+    func getSectionList() -> AnyPublisher<ResponseModel<SectionModel>, MoyaError> {
+        return service.getSectionLists()
     }
 }
