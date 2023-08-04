@@ -8,10 +8,8 @@
 import Foundation
 
 protocol ViewProtocol {
-    
     associatedtype P: PresenterProtocol
     
     var presenter: P! { get }
     
-//    init(presenter: P)
 }

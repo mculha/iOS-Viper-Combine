@@ -24,6 +24,7 @@
 		E96C3C702A7C4F380032F7A1 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C6F2A7C4F380032F7A1 /* SectionViewController.swift */; };
 		E96C3C722A7C51330032F7A1 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C712A7C51330032F7A1 /* ViewProtocol.swift */; };
 		E96C3C752A7D89230032F7A1 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C742A7D89230032F7A1 /* Extension+UIViewController.swift */; };
+		E96C3C772A7D8E0A0032F7A1 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C762A7D8E0A0032F7A1 /* AppStoryboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		E96C3C6F2A7C4F380032F7A1 /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
 		E96C3C712A7C51330032F7A1 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		E96C3C742A7D89230032F7A1 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		E96C3C762A7D8E0A0032F7A1 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				E96C3C732A7D890C0032F7A1 /* Extensions */,
 				E96C3C5B2A7C46940032F7A1 /* Constant.swift */,
+				E96C3C762A7D8E0A0032F7A1 /* AppStoryboard.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				E96C3C602A7C4A4C0032F7A1 /* InteractorProtocol.swift in Sources */,
 				E96C3C5E2A7C4A100032F7A1 /* PresenterProtocol.swift in Sources */,
 				E96C3C622A7C4A600032F7A1 /* RouterProtocol.swift in Sources */,
+				E96C3C772A7D8E0A0032F7A1 /* AppStoryboard.swift in Sources */,
 				E9584C4D2A78533900267C47 /* AppDelegate.swift in Sources */,
 				E9584C4F2A78533900267C47 /* SceneDelegate.swift in Sources */,
 				E96C3C682A7C4D480032F7A1 /* SectionPresenter.swift in Sources */,

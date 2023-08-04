@@ -11,7 +11,7 @@ import UIKit
 final class SectionRouter: RouterProtocol {
     
     class func createSection() -> UIViewController {
-        let view = mainstoryboard.instantiateViewController(withIdentifier: "SectionViewController") as! SectionViewController
+        let view: SectionViewController = SectionViewController.instantiate()
 
         let presenter = SectionPresenter(router: .init())
         let interactor = SectionInteractor(presenter: presenter)
@@ -21,9 +21,5 @@ final class SectionRouter: RouterProtocol {
         presenter.interactor = interactor
         
         return view
-    }
-    
-    static var mainstoryboard: UIStoryboard {
-        return UIStoryboard(name: "Main",bundle: Bundle.main)
     }
 }
