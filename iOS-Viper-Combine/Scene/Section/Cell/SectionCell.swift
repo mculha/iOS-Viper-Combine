@@ -9,7 +9,7 @@ import UIKit
 
 class SectionCell: UITableViewCell {
 
-    @IBOutlet weak var lblSection: UILabel!
+    @IBOutlet private weak var lblSection: UILabel!
     
     func setupCell(model: SectionModel) {
         self.lblSection.text = model.displayName

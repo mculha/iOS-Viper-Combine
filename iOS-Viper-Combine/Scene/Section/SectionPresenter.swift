@@ -9,7 +9,9 @@ import Foundation
 import Combine
 
 final class SectionPresenter: PresenterProtocol {    
-    var interactor: SectionInteractor!
+    var interactor: SectionInteractor! {
+        didSet { self.setupBindings() }
+    }
     weak var view: SectionViewController?
     var router: SectionRouter
     

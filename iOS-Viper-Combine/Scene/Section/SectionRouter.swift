@@ -15,10 +15,11 @@ final class SectionRouter: RouterProtocol {
 
         let presenter = SectionPresenter(router: .init())
         let interactor = SectionInteractor(presenter: presenter)
+        presenter.interactor = interactor
         
         view.presenter = presenter
         presenter.view = view
-        presenter.interactor = interactor
+        
         
         return view
     }
