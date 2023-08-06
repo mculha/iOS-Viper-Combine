@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let sectionViewController = SectionRouter.createSection()
-        window?.rootViewController = sectionViewController
+        window?.rootViewController = UINavigationController(rootViewController: sectionViewController)
         window?.makeKeyAndVisible()
     }
 

@@ -30,6 +30,10 @@
 		E96C3C7E2A7D96590032F7A1 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C7D2A7D96590032F7A1 /* SectionModel.swift */; };
 		E96C3C802A7D96EE0032F7A1 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C7F2A7D96EE0032F7A1 /* ResponseModel.swift */; };
 		E96C3C862A7D97780032F7A1 /* SectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C852A7D97780032F7A1 /* SectionService.swift */; };
+		E96C3C8A2A8025A00032F7A1 /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C882A8025A00032F7A1 /* SectionCell.swift */; };
+		E96C3C8B2A8025A00032F7A1 /* SectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96C3C892A8025A00032F7A1 /* SectionCell.xib */; };
+		E96C3C8D2A8026260032F7A1 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C8C2A8026260032F7A1 /* Extension+UITableView.swift */; };
+		E96C3C8F2A80275B0032F7A1 /* Extension+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C8E2A80275B0032F7A1 /* Extension+UITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,10 @@
 		E96C3C7D2A7D96590032F7A1 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		E96C3C7F2A7D96EE0032F7A1 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		E96C3C852A7D97780032F7A1 /* SectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionService.swift; sourceTree = "<group>"; };
+		E96C3C882A8025A00032F7A1 /* SectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
+		E96C3C892A8025A00032F7A1 /* SectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionCell.xib; sourceTree = "<group>"; };
+		E96C3C8C2A8026260032F7A1 /* Extension+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableView.swift"; sourceTree = "<group>"; };
+		E96C3C8E2A80275B0032F7A1 /* Extension+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +185,7 @@
 		E96C3C662A7C4D400032F7A1 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				E96C3C872A80257C0032F7A1 /* Cell */,
 				E96C3C672A7C4D480032F7A1 /* SectionPresenter.swift */,
 				E96C3C692A7C4D500032F7A1 /* SectionInteractor.swift */,
 				E96C3C6B2A7C4D590032F7A1 /* SectionRouter.swift */,
@@ -189,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				E96C3C742A7D89230032F7A1 /* Extension+UIViewController.swift */,
+				E96C3C8C2A8026260032F7A1 /* Extension+UITableView.swift */,
+				E96C3C8E2A80275B0032F7A1 /* Extension+UITableViewCell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +227,15 @@
 				E96C3C852A7D97780032F7A1 /* SectionService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E96C3C872A80257C0032F7A1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E96C3C882A8025A00032F7A1 /* SectionCell.swift */,
+				E96C3C892A8025A00032F7A1 /* SectionCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F8DE53F705FE28643D13C689 /* Frameworks */ = {
@@ -292,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9584C592A78533A00267C47 /* LaunchScreen.storyboard in Resources */,
+				E96C3C8B2A8025A00032F7A1 /* SectionCell.xib in Resources */,
 				E9584C562A78533A00267C47 /* Assets.xcassets in Resources */,
 				E9584C542A78533900267C47 /* Main.storyboard in Resources */,
 			);
@@ -334,16 +355,19 @@
 				E96C3C602A7C4A4C0032F7A1 /* InteractorProtocol.swift in Sources */,
 				E96C3C5E2A7C4A100032F7A1 /* PresenterProtocol.swift in Sources */,
 				E96C3C7E2A7D96590032F7A1 /* SectionModel.swift in Sources */,
+				E96C3C8A2A8025A00032F7A1 /* SectionCell.swift in Sources */,
 				E96C3C7B2A7D91590032F7A1 /* BaseMoyaProvider.swift in Sources */,
 				E96C3C622A7C4A600032F7A1 /* RouterProtocol.swift in Sources */,
 				E96C3C772A7D8E0A0032F7A1 /* AppStoryboard.swift in Sources */,
 				E9584C4D2A78533900267C47 /* AppDelegate.swift in Sources */,
 				E9584C4F2A78533900267C47 /* SceneDelegate.swift in Sources */,
+				E96C3C8D2A8026260032F7A1 /* Extension+UITableView.swift in Sources */,
 				E96C3C792A7D90A50032F7A1 /* NewsProvider.swift in Sources */,
 				E96C3C682A7C4D480032F7A1 /* SectionPresenter.swift in Sources */,
 				E96C3C6A2A7C4D500032F7A1 /* SectionInteractor.swift in Sources */,
 				E96C3C752A7D89230032F7A1 /* Extension+UIViewController.swift in Sources */,
 				E96C3C6C2A7C4D590032F7A1 /* SectionRouter.swift in Sources */,
+				E96C3C8F2A80275B0032F7A1 /* Extension+UITableViewCell.swift in Sources */,
 				E96C3C802A7D96EE0032F7A1 /* ResponseModel.swift in Sources */,
 				E96C3C722A7C51330032F7A1 /* ViewProtocol.swift in Sources */,
 				E96C3C5C2A7C46940032F7A1 /* Constant.swift in Sources */,
