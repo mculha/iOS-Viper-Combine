@@ -20,6 +20,6 @@ final class SectionInteractor: InteractorProtocol {
     }
     
     func getSectionList() -> AnyPublisher<ResponseModel<SectionModel>, MoyaError> {
-        return service.getSectionLists()
+        return service.getSectionList()
     }
 }

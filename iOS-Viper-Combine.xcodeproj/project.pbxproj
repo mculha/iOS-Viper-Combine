@@ -35,6 +35,7 @@
 		E96C3C8D2A8026260032F7A1 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C8C2A8026260032F7A1 /* Extension+UITableView.swift */; };
 		E96C3C8F2A80275B0032F7A1 /* Extension+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C8E2A80275B0032F7A1 /* Extension+UITableViewCell.swift */; };
 		E96C3C972A817BFA0032F7A1 /* iOS_Viper_CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C962A817BFA0032F7A1 /* iOS_Viper_CombineTests.swift */; };
+		E96C3C9E2A817D0D0032F7A1 /* SectionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C9D2A817D0D0032F7A1 /* SectionServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		E96C3C8E2A80275B0032F7A1 /* Extension+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewCell.swift"; sourceTree = "<group>"; };
 		E96C3C942A817BFA0032F7A1 /* iOS-Viper-CombineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-Viper-CombineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96C3C962A817BFA0032F7A1 /* iOS_Viper_CombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Viper_CombineTests.swift; sourceTree = "<group>"; };
+		E96C3C9D2A817D0D0032F7A1 /* SectionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				E96C3C962A817BFA0032F7A1 /* iOS_Viper_CombineTests.swift */,
+				E96C3C9D2A817D0D0032F7A1 /* SectionServiceTests.swift */,
 			);
 			path = "iOS-Viper-CombineTests";
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96C3C972A817BFA0032F7A1 /* iOS_Viper_CombineTests.swift in Sources */,
+				E96C3C9E2A817D0D0032F7A1 /* SectionServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

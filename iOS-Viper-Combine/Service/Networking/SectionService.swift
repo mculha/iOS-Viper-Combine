@@ -12,7 +12,7 @@ import CombineMoya
 
 protocol SectionServiceProtocol {
     
-    func getSectionLists() -> AnyPublisher<ResponseModel<SectionModel>, MoyaError>
+    func getSectionList() -> AnyPublisher<ResponseModel<SectionModel>, MoyaError>
     
 }
 
@@ -28,7 +28,7 @@ final class SectionService {
 
 extension SectionService: SectionServiceProtocol {
     
-    func getSectionLists() -> AnyPublisher<ResponseModel<SectionModel>, MoyaError> {
+    func getSectionList() -> AnyPublisher<ResponseModel<SectionModel>, MoyaError> {
         self.provider.requestPublisher(.sectionList)
             .filterSuccessfulStatusAndRedirectCodes()
             .map(ResponseModel<SectionModel>.self)
