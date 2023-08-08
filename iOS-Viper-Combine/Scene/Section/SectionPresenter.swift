@@ -34,4 +34,9 @@ final class SectionPresenter: PresenterProtocol {
             .store(in: &store)
     }
 
+    func didSelectItemAt(_ index: Int) {
+        guard let section = sections.value[index].section else { return }
+        
+        router.push(vc: SectionDetailRouter.createSectionDetail(section: section), navigationController: view?.navigationController)
+    }
 }

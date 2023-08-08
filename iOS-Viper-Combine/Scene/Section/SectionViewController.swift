@@ -49,4 +49,9 @@ extension SectionViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.didSelectItemAt(indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }

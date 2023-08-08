@@ -23,4 +23,8 @@ final class SectionRouter: RouterProtocol {
         
         return view
     }
+    
+    func push(vc: UIViewController, navigationController: UINavigationController?) {
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

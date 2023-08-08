@@ -36,6 +36,10 @@
 		E96C3C8F2A80275B0032F7A1 /* Extension+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C8E2A80275B0032F7A1 /* Extension+UITableViewCell.swift */; };
 		E96C3C972A817BFA0032F7A1 /* iOS_Viper_CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C962A817BFA0032F7A1 /* iOS_Viper_CombineTests.swift */; };
 		E96C3C9E2A817D0D0032F7A1 /* SectionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3C9D2A817D0D0032F7A1 /* SectionServiceTests.swift */; };
+		E96C3CA12A82D9F50032F7A1 /* SectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CA02A82D9F50032F7A1 /* SectionDetailViewController.swift */; };
+		E96C3CA32A82DA1E0032F7A1 /* SectionDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CA22A82DA1E0032F7A1 /* SectionDetailPresenter.swift */; };
+		E96C3CA52A82DA2A0032F7A1 /* SectionDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CA42A82DA2A0032F7A1 /* SectionDetailInteractor.swift */; };
+		E96C3CA72A82DA320032F7A1 /* SectionDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CA62A82DA320032F7A1 /* SectionDetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		E96C3C942A817BFA0032F7A1 /* iOS-Viper-CombineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-Viper-CombineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96C3C962A817BFA0032F7A1 /* iOS_Viper_CombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Viper_CombineTests.swift; sourceTree = "<group>"; };
 		E96C3C9D2A817D0D0032F7A1 /* SectionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionServiceTests.swift; sourceTree = "<group>"; };
+		E96C3CA02A82D9F50032F7A1 /* SectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailViewController.swift; sourceTree = "<group>"; };
+		E96C3CA22A82DA1E0032F7A1 /* SectionDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailPresenter.swift; sourceTree = "<group>"; };
+		E96C3CA42A82DA2A0032F7A1 /* SectionDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailInteractor.swift; sourceTree = "<group>"; };
+		E96C3CA62A82DA320032F7A1 /* SectionDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,7 @@
 		E96C3C552A7C46450032F7A1 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				E96C3C9F2A82D9C70032F7A1 /* SectionDetail */,
 				E96C3C662A7C4D400032F7A1 /* Section */,
 			);
 			path = Scene;
@@ -269,6 +278,17 @@
 				E96C3C9D2A817D0D0032F7A1 /* SectionServiceTests.swift */,
 			);
 			path = "iOS-Viper-CombineTests";
+			sourceTree = "<group>";
+		};
+		E96C3C9F2A82D9C70032F7A1 /* SectionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E96C3CA22A82DA1E0032F7A1 /* SectionDetailPresenter.swift */,
+				E96C3CA42A82DA2A0032F7A1 /* SectionDetailInteractor.swift */,
+				E96C3CA62A82DA320032F7A1 /* SectionDetailRouter.swift */,
+				E96C3CA02A82D9F50032F7A1 /* SectionDetailViewController.swift */,
+			);
+			path = SectionDetail;
 			sourceTree = "<group>";
 		};
 		F8DE53F705FE28643D13C689 /* Frameworks */ = {
@@ -413,12 +433,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96C3CA72A82DA320032F7A1 /* SectionDetailRouter.swift in Sources */,
 				E96C3C702A7C4F380032F7A1 /* SectionViewController.swift in Sources */,
 				E96C3C862A7D97780032F7A1 /* SectionService.swift in Sources */,
 				E96C3C602A7C4A4C0032F7A1 /* InteractorProtocol.swift in Sources */,
+				E96C3CA52A82DA2A0032F7A1 /* SectionDetailInteractor.swift in Sources */,
+				E96C3CA12A82D9F50032F7A1 /* SectionDetailViewController.swift in Sources */,
 				E96C3C5E2A7C4A100032F7A1 /* PresenterProtocol.swift in Sources */,
 				E96C3C7E2A7D96590032F7A1 /* SectionModel.swift in Sources */,
 				E96C3C8A2A8025A00032F7A1 /* SectionCell.swift in Sources */,
+				E96C3CA32A82DA1E0032F7A1 /* SectionDetailPresenter.swift in Sources */,
 				E96C3C7B2A7D91590032F7A1 /* BaseMoyaProvider.swift in Sources */,
 				E96C3C622A7C4A600032F7A1 /* RouterProtocol.swift in Sources */,
 				E96C3C772A7D8E0A0032F7A1 /* AppStoryboard.swift in Sources */,
