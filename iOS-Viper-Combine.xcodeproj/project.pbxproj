@@ -40,6 +40,8 @@
 		E96C3CA32A82DA1E0032F7A1 /* SectionDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CA22A82DA1E0032F7A1 /* SectionDetailPresenter.swift */; };
 		E96C3CA52A82DA2A0032F7A1 /* SectionDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CA42A82DA2A0032F7A1 /* SectionDetailInteractor.swift */; };
 		E96C3CA72A82DA320032F7A1 /* SectionDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CA62A82DA320032F7A1 /* SectionDetailRouter.swift */; };
+		E96C3CA92A82DEF00032F7A1 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CA82A82DEF00032F7A1 /* ImageModel.swift */; };
+		E96C3CAB2A82DF3F0032F7A1 /* SectionDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CAA2A82DF3F0032F7A1 /* SectionDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		E96C3CA22A82DA1E0032F7A1 /* SectionDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailPresenter.swift; sourceTree = "<group>"; };
 		E96C3CA42A82DA2A0032F7A1 /* SectionDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailInteractor.swift; sourceTree = "<group>"; };
 		E96C3CA62A82DA320032F7A1 /* SectionDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailRouter.swift; sourceTree = "<group>"; };
+		E96C3CA82A82DEF00032F7A1 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		E96C3CAA2A82DF3F0032F7A1 /* SectionDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +246,8 @@
 			children = (
 				E96C3C7D2A7D96590032F7A1 /* SectionModel.swift */,
 				E96C3C7F2A7D96EE0032F7A1 /* ResponseModel.swift */,
+				E96C3CA82A82DEF00032F7A1 /* ImageModel.swift */,
+				E96C3CAA2A82DF3F0032F7A1 /* SectionDetailModel.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -444,6 +450,8 @@
 				E96C3C8A2A8025A00032F7A1 /* SectionCell.swift in Sources */,
 				E96C3CA32A82DA1E0032F7A1 /* SectionDetailPresenter.swift in Sources */,
 				E96C3C7B2A7D91590032F7A1 /* BaseMoyaProvider.swift in Sources */,
+				E96C3CAB2A82DF3F0032F7A1 /* SectionDetailModel.swift in Sources */,
+				E96C3CA92A82DEF00032F7A1 /* ImageModel.swift in Sources */,
 				E96C3C622A7C4A600032F7A1 /* RouterProtocol.swift in Sources */,
 				E96C3C772A7D8E0A0032F7A1 /* AppStoryboard.swift in Sources */,
 				E9584C4D2A78533900267C47 /* AppDelegate.swift in Sources */,

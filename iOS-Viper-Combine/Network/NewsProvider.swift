@@ -11,6 +11,7 @@ import Moya
 
 enum News {
     case sectionList
+    case sectionDetail(section: String)
 }
 
 extension News: TargetType {
@@ -22,6 +23,8 @@ extension News: TargetType {
         switch self {
         case .sectionList:
             return "section-list.json"
+        case .sectionDetail(section: let section):
+            return String(format: "all/%@.json", section)
         }
     }
     

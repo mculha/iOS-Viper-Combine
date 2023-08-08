@@ -11,12 +11,12 @@ import Combine
 
 final class SectionServiceTests: XCTestCase {
 
-    private var service: SectionService!
+    private var service: SectionServiceProtocol!
     private var store: Set<AnyCancellable>!
     
     override func setUpWithError() throws {
         self.store = .init()
-        self.service = .init()
+        self.service = SectionService()
     }
 
     override func tearDownWithError() throws {
@@ -25,7 +25,7 @@ final class SectionServiceTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testSectionService() {
+    func testSectionService() throws {
         
         let expectation = XCTestExpectation(description: "Receiving the Sections")
         
@@ -37,6 +37,32 @@ final class SectionServiceTests: XCTestCase {
             .sink { sections in
                 XCTAssertNotNil(sections)
                 XCTAssertGreaterThan(sections.count, 0)
+                expectation.fulfill()
+            }
+            .store(in: &store)
+        
+        wait(for: [expectation], timeout: 5)
+    }
+    
+    func testSectionDetailService() throws {
+        let expectation = XCTestExpectation(description: "Receiving the Section Detail")
+        
+        self.service
+            .getSectionDetail(section: "arts")
+            .receive(on: DispatchQueue.main)
+            .map { response in return response.results ?? [] }
+            .replaceError(with: [])
+            .sink { sections in
+                XCTAssertNotNil(sections)
+                XCTAssertGreaterThan(sections.count, 0)
+                XCTAssertNotNil(sections.first)
+                XCTAssertNotNil(sections.first?.multimedia)
+                XCTAssertNotNil(sections.first?.image)
+                XCTAssertNotNil(sections.first?.image?.url)
+                XCTAssertNotNil(sections.first?.image?.height)
+                XCTAssertNotNil(sections.first?.image?.width)
+                XCTAssertGreaterThan(sections.first?.multimedia?.count ?? 0, 0)
+                
                 expectation.fulfill()
             }
             .store(in: &store)

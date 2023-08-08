@@ -14,6 +14,8 @@ protocol SectionServiceProtocol {
     
     func getSectionList() -> AnyPublisher<ResponseModel<SectionModel>, MoyaError>
     
+    func getSectionDetail(section: String) -> AnyPublisher<ResponseModel<SectionDetailModel>, MoyaError>
+    
 }
 
 final class SectionService {
@@ -32,6 +34,13 @@ extension SectionService: SectionServiceProtocol {
         self.provider.requestPublisher(.sectionList)
             .filterSuccessfulStatusAndRedirectCodes()
             .map(ResponseModel<SectionModel>.self)
+            .eraseToAnyPublisher()
+    }
+     
+    func getSectionDetail(section: String) -> AnyPublisher<ResponseModel<SectionDetailModel>, MoyaError> {
+        self.provider.requestPublisher(.sectionDetail(section: section))
+            .filterSuccessfulStatusAndRedirectCodes()
+            .map(ResponseModel<SectionDetailModel>.self)
             .eraseToAnyPublisher()
     }
     
