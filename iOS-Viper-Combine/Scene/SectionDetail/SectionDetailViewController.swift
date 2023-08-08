@@ -9,14 +9,20 @@ import UIKit
 
 class SectionDetailViewController: UIViewController, ViewProtocol {    
 
-    
-    @IBOutlet private weak var lblTitle: UILabel!
-    
     var presenter: SectionDetailPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.lblTitle.text = presenter.section
+        self.presenter.viewDidLoad()
+        self.setupUI()
+        self.setupBindings()
+    }
+    
+    private func setupBindings() {
+        //TODO Build Here
+    }
+    
+    private func setupUI() {
+        //TODO Build Here
     }
 }

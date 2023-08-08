@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 final class SectionDetailPresenter: PresenterProtocol {
 
@@ -13,7 +14,10 @@ final class SectionDetailPresenter: PresenterProtocol {
     weak var view: SectionDetailViewController?
     var router: SectionDetailRouter
     
-    var section: String
+    private var section: String
+    
+    private var store: Set<AnyCancellable> = .init()
+    var sectionDetails: CurrentValueSubject<[SectionDetailModel], Never> = .init([])
     
     init(router: SectionDetailRouter) {
         self.section = ""
@@ -26,7 +30,17 @@ final class SectionDetailPresenter: PresenterProtocol {
     }
     
     func viewDidLoad() {
-        
+        self.setupBindings()
+    }
+    
+    private func setupBindings() {
+        self.interactor
+            .getSectionDetail(section: section)
+            .receive(on: DispatchQueue.main)
+            .map { response in return response.results ?? [] }
+            .replaceError(with: [])
+            .assign(to: \.value, on: sectionDetails)
+            .store(in: &store)
     }
     
 }
