@@ -17,6 +17,7 @@ class SectionViewController: UIViewController, ViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter.viewDidLoad()
         self.setupUI()
         self.setupBindings()
     }

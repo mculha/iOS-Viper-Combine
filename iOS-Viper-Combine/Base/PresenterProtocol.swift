@@ -19,4 +19,6 @@ protocol PresenterProtocol {
     
     init(router: R)
     
+    func viewDidLoad()
+    
 }

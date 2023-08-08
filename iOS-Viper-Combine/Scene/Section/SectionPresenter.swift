@@ -9,9 +9,7 @@ import Foundation
 import Combine
 
 final class SectionPresenter: PresenterProtocol {    
-    var interactor: SectionInteractor! {
-        didSet { self.setupBindings() }
-    }
+    var interactor: SectionInteractor!
     weak var view: SectionViewController?
     var router: SectionRouter
     
@@ -20,6 +18,10 @@ final class SectionPresenter: PresenterProtocol {
     
     init(router: SectionRouter) {
         self.router = router
+    }
+    
+    func viewDidLoad() {
+        self.setupBindings()
     }
     
     private func setupBindings() {
