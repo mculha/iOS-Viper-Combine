@@ -25,7 +25,7 @@ class SectionViewController: UIViewController, ViewProtocol {
     private func setupBindings() {
         self.presenter
             .sections
-            .sink { _ in self.tableView.reloadData() }
+            .sink { [weak self] _ in self?.tableView.reloadData() }
             .store(in: &store)
     }
     
