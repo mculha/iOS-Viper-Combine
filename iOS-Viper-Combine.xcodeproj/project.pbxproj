@@ -42,6 +42,10 @@
 		E96C3CA72A82DA320032F7A1 /* SectionDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CA62A82DA320032F7A1 /* SectionDetailRouter.swift */; };
 		E96C3CA92A82DEF00032F7A1 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CA82A82DEF00032F7A1 /* ImageModel.swift */; };
 		E96C3CAB2A82DF3F0032F7A1 /* SectionDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C3CAA2A82DF3F0032F7A1 /* SectionDetailModel.swift */; };
+		E9D9E2962A842ED100FADB1E /* SectionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D9E2942A842ED100FADB1E /* SectionDetailCell.swift */; };
+		E9D9E2972A842ED100FADB1E /* SectionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D9E2952A842ED100FADB1E /* SectionDetailCell.xib */; };
+		E9D9E29A2A84309800FADB1E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E9D9E2992A84309800FADB1E /* Kingfisher */; };
+		E9D9E29C2A84350200FADB1E /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D9E29B2A84350200FADB1E /* Extension+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +98,9 @@
 		E96C3CA62A82DA320032F7A1 /* SectionDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailRouter.swift; sourceTree = "<group>"; };
 		E96C3CA82A82DEF00032F7A1 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		E96C3CAA2A82DF3F0032F7A1 /* SectionDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailModel.swift; sourceTree = "<group>"; };
+		E9D9E2942A842ED100FADB1E /* SectionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailCell.swift; sourceTree = "<group>"; };
+		E9D9E2952A842ED100FADB1E /* SectionDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionDetailCell.xib; sourceTree = "<group>"; };
+		E9D9E29B2A84350200FADB1E /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D9E29A2A84309800FADB1E /* Kingfisher in Frameworks */,
 				E96C3C652A7C4CFB0032F7A1 /* CombineMoya in Frameworks */,
 				75E0ADE4B30AFAC998520D91 /* Pods_iOS_Viper_Combine.framework in Frameworks */,
 			);
@@ -237,6 +245,7 @@
 				E96C3C742A7D89230032F7A1 /* Extension+UIViewController.swift */,
 				E96C3C8C2A8026260032F7A1 /* Extension+UITableView.swift */,
 				E96C3C8E2A80275B0032F7A1 /* Extension+UITableViewCell.swift */,
+				E9D9E29B2A84350200FADB1E /* Extension+UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,12 +298,22 @@
 		E96C3C9F2A82D9C70032F7A1 /* SectionDetail */ = {
 			isa = PBXGroup;
 			children = (
+				E9D9E2932A842EB900FADB1E /* Cell */,
 				E96C3CA22A82DA1E0032F7A1 /* SectionDetailPresenter.swift */,
 				E96C3CA42A82DA2A0032F7A1 /* SectionDetailInteractor.swift */,
 				E96C3CA62A82DA320032F7A1 /* SectionDetailRouter.swift */,
 				E96C3CA02A82D9F50032F7A1 /* SectionDetailViewController.swift */,
 			);
 			path = SectionDetail;
+			sourceTree = "<group>";
+		};
+		E9D9E2932A842EB900FADB1E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E9D9E2942A842ED100FADB1E /* SectionDetailCell.swift */,
+				E9D9E2952A842ED100FADB1E /* SectionDetailCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F8DE53F705FE28643D13C689 /* Frameworks */ = {
@@ -324,6 +343,7 @@
 			name = "iOS-Viper-Combine";
 			packageProductDependencies = (
 				E96C3C642A7C4CFB0032F7A1 /* CombineMoya */,
+				E9D9E2992A84309800FADB1E /* Kingfisher */,
 			);
 			productName = "iOS-Viper-Combine";
 			productReference = E9584C492A78533900267C47 /* iOS-Viper-Combine.app */;
@@ -377,6 +397,7 @@
 			mainGroup = E9584C402A78533900267C47;
 			packageReferences = (
 				E96C3C632A7C4CFB0032F7A1 /* XCRemoteSwiftPackageReference "Moya" */,
+				E9D9E2982A84309800FADB1E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = E9584C4A2A78533900267C47 /* Products */;
 			projectDirPath = "";
@@ -393,6 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D9E2972A842ED100FADB1E /* SectionDetailCell.xib in Resources */,
 				E9584C592A78533A00267C47 /* LaunchScreen.storyboard in Resources */,
 				E96C3C8B2A8025A00032F7A1 /* SectionCell.xib in Resources */,
 				E9584C562A78533A00267C47 /* Assets.xcassets in Resources */,
@@ -445,6 +467,7 @@
 				E96C3C602A7C4A4C0032F7A1 /* InteractorProtocol.swift in Sources */,
 				E96C3CA52A82DA2A0032F7A1 /* SectionDetailInteractor.swift in Sources */,
 				E96C3CA12A82D9F50032F7A1 /* SectionDetailViewController.swift in Sources */,
+				E9D9E29C2A84350200FADB1E /* Extension+UIView.swift in Sources */,
 				E96C3C5E2A7C4A100032F7A1 /* PresenterProtocol.swift in Sources */,
 				E96C3C7E2A7D96590032F7A1 /* SectionModel.swift in Sources */,
 				E96C3C8A2A8025A00032F7A1 /* SectionCell.swift in Sources */,
@@ -457,6 +480,7 @@
 				E9584C4D2A78533900267C47 /* AppDelegate.swift in Sources */,
 				E9584C4F2A78533900267C47 /* SceneDelegate.swift in Sources */,
 				E96C3C8D2A8026260032F7A1 /* Extension+UITableView.swift in Sources */,
+				E9D9E2962A842ED100FADB1E /* SectionDetailCell.swift in Sources */,
 				E96C3C792A7D90A50032F7A1 /* NewsProvider.swift in Sources */,
 				E96C3C682A7C4D480032F7A1 /* SectionPresenter.swift in Sources */,
 				E96C3C6A2A7C4D500032F7A1 /* SectionInteractor.swift in Sources */,
@@ -770,6 +794,14 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		E9D9E2982A84309800FADB1E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -777,6 +809,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E96C3C632A7C4CFB0032F7A1 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = CombineMoya;
+		};
+		E9D9E2992A84309800FADB1E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9D9E2982A84309800FADB1E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
