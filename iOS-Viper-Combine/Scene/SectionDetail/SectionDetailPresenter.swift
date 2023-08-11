@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Moya
 
 final class SectionDetailPresenter: PresenterProtocol {
 
@@ -18,6 +19,7 @@ final class SectionDetailPresenter: PresenterProtocol {
     
     private var store: Set<AnyCancellable> = .init()
     var sectionDetails: CurrentValueSubject<[SectionDetailModel], Never> = .init([])
+    var error: PassthroughSubject<String, Never> = .init()
     
     init(router: SectionDetailRouter) {
         self.section = ""
@@ -38,9 +40,36 @@ final class SectionDetailPresenter: PresenterProtocol {
             .getSectionDetail(section: section)
             .receive(on: DispatchQueue.main)
             .map { response in return response.results ?? [] }
-            .replaceError(with: [])
+            .mapError { response in return NyTimesError(error: response) }
+            .catch { error -> AnyPublisher<[SectionDetailModel], Never> in
+                self.error.send(error.message)
+                return Just([]).eraseToAnyPublisher()
+            }
             .assign(to: \.value, on: sectionDetails)
             .store(in: &store)
     }
     
+}
+
+struct NyTimesError: Error {
+    
+    let error: MoyaError
+    
+    var message: String {
+        guard let data = error.response?.data else { return "An error occured. Please try again" }
+        let fault = try? JSONDecoder().decode(FaultResponse.self, from: data)
+        return fault?.fault?.faultString ?? "An error occured. Please try again"
+    }
+}
+
+struct NYFaultResponse: Decodable {
+    let faultString: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case faultString = "faultstring"
+    }
+}
+
+struct FaultResponse: Decodable {
+    let fault: NYFaultResponse?
 }

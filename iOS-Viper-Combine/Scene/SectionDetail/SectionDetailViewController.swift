@@ -27,6 +27,14 @@ class SectionDetailViewController: UIViewController, ViewProtocol {
             .sectionDetails
             .sink { [weak self] _ in self?.tableView.reloadData() }
             .store(in: &store)
+        
+        self.presenter
+            .error
+            .sink { [weak self] error in
+                guard let self else { return }
+                AlertHelper.showAlert(on: self, message: error) { _ in self.navigationController?.popViewController(animated: true) }
+            }
+            .store(in: &store)
     }
     
     private func setupUI() {

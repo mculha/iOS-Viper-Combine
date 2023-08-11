@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		75E0ADE4B30AFAC998520D91 /* Pods_iOS_Viper_Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F01E310A5A0417796E305C5 /* Pods_iOS_Viper_Combine.framework */; };
+		E94AD5D22A86CA62003BE7AD /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94AD5D12A86CA62003BE7AD /* AlertHelper.swift */; };
 		E9584C4D2A78533900267C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584C4C2A78533900267C47 /* AppDelegate.swift */; };
 		E9584C4F2A78533900267C47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584C4E2A78533900267C47 /* SceneDelegate.swift */; };
 		E9584C542A78533900267C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9584C522A78533900267C47 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		6F01E310A5A0417796E305C5 /* Pods_iOS_Viper_Combine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Viper_Combine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7C10989D35839EEF606C9C /* Pods-iOS-Viper-Combine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Viper-Combine.release.xcconfig"; path = "Target Support Files/Pods-iOS-Viper-Combine/Pods-iOS-Viper-Combine.release.xcconfig"; sourceTree = "<group>"; };
 		D22CD9286DFA20DE05B42580 /* Pods-iOS-Viper-Combine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Viper-Combine.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Viper-Combine/Pods-iOS-Viper-Combine.debug.xcconfig"; sourceTree = "<group>"; };
+		E94AD5D12A86CA62003BE7AD /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		E9584C492A78533900267C47 /* iOS-Viper-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Viper-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9584C4C2A78533900267C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9584C4E2A78533900267C47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				E96C3C732A7D890C0032F7A1 /* Extensions */,
 				E96C3C5B2A7C46940032F7A1 /* Constant.swift */,
 				E96C3C762A7D8E0A0032F7A1 /* AppStoryboard.swift */,
+				E94AD5D12A86CA62003BE7AD /* AlertHelper.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				E96C3C772A7D8E0A0032F7A1 /* AppStoryboard.swift in Sources */,
 				E9584C4D2A78533900267C47 /* AppDelegate.swift in Sources */,
 				E9584C4F2A78533900267C47 /* SceneDelegate.swift in Sources */,
+				E94AD5D22A86CA62003BE7AD /* AlertHelper.swift in Sources */,
 				E96C3C8D2A8026260032F7A1 /* Extension+UITableView.swift in Sources */,
 				E9D9E2962A842ED100FADB1E /* SectionDetailCell.swift in Sources */,
 				E96C3C792A7D90A50032F7A1 /* NewsProvider.swift in Sources */,
