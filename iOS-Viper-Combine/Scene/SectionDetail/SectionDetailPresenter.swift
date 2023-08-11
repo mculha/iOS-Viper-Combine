@@ -40,7 +40,7 @@ final class SectionDetailPresenter: PresenterProtocol {
             .getSectionDetail(section: section)
             .receive(on: DispatchQueue.main)
             .map { response in return response.results ?? [] }
-            .mapError { response in return NyTimesError(error: response) }
+            .mapError { response in return ResponseErrorModel(error: response) }
             .catch { error -> AnyPublisher<[SectionDetailModel], Never> in
                 self.error.send(error.message)
                 return Just([]).eraseToAnyPublisher()
@@ -51,25 +51,3 @@ final class SectionDetailPresenter: PresenterProtocol {
     
 }
 
-struct NyTimesError: Error {
-    
-    let error: MoyaError
-    
-    var message: String {
-        guard let data = error.response?.data else { return "An error occured. Please try again" }
-        let fault = try? JSONDecoder().decode(FaultResponse.self, from: data)
-        return fault?.fault?.faultString ?? "An error occured. Please try again"
-    }
-}
-
-struct NYFaultResponse: Decodable {
-    let faultString: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case faultString = "faultstring"
-    }
-}
-
-struct FaultResponse: Decodable {
-    let fault: NYFaultResponse?
-}

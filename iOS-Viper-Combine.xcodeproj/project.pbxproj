@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		75E0ADE4B30AFAC998520D91 /* Pods_iOS_Viper_Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F01E310A5A0417796E305C5 /* Pods_iOS_Viper_Combine.framework */; };
 		E94AD5D22A86CA62003BE7AD /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94AD5D12A86CA62003BE7AD /* AlertHelper.swift */; };
+		E94AD5D52A86CF2C003BE7AD /* ResponseErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94AD5D42A86CF2C003BE7AD /* ResponseErrorModel.swift */; };
+		E94AD5D72A86CF63003BE7AD /* NYFaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94AD5D62A86CF63003BE7AD /* NYFaultModel.swift */; };
+		E94AD5D92A86CF89003BE7AD /* FaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94AD5D82A86CF89003BE7AD /* FaultModel.swift */; };
 		E9584C4D2A78533900267C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584C4C2A78533900267C47 /* AppDelegate.swift */; };
 		E9584C4F2A78533900267C47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584C4E2A78533900267C47 /* SceneDelegate.swift */; };
 		E9584C542A78533900267C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9584C522A78533900267C47 /* Main.storyboard */; };
@@ -64,6 +67,9 @@
 		AA7C10989D35839EEF606C9C /* Pods-iOS-Viper-Combine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Viper-Combine.release.xcconfig"; path = "Target Support Files/Pods-iOS-Viper-Combine/Pods-iOS-Viper-Combine.release.xcconfig"; sourceTree = "<group>"; };
 		D22CD9286DFA20DE05B42580 /* Pods-iOS-Viper-Combine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Viper-Combine.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Viper-Combine/Pods-iOS-Viper-Combine.debug.xcconfig"; sourceTree = "<group>"; };
 		E94AD5D12A86CA62003BE7AD /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		E94AD5D42A86CF2C003BE7AD /* ResponseErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseErrorModel.swift; sourceTree = "<group>"; };
+		E94AD5D62A86CF63003BE7AD /* NYFaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYFaultModel.swift; sourceTree = "<group>"; };
+		E94AD5D82A86CF89003BE7AD /* FaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaultModel.swift; sourceTree = "<group>"; };
 		E9584C492A78533900267C47 /* iOS-Viper-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Viper-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9584C4C2A78533900267C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9584C4E2A78533900267C47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +141,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E94AD5D32A86CF0A003BE7AD /* Failure */ = {
+			isa = PBXGroup;
+			children = (
+				E94AD5D42A86CF2C003BE7AD /* ResponseErrorModel.swift */,
+				E94AD5D62A86CF63003BE7AD /* NYFaultModel.swift */,
+				E94AD5D82A86CF89003BE7AD /* FaultModel.swift */,
+			);
+			path = Failure;
+			sourceTree = "<group>";
+		};
 		E9584C402A78533900267C47 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +210,7 @@
 		E96C3C572A7C46500032F7A1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E94AD5D32A86CF0A003BE7AD /* Failure */,
 				E96C3C7C2A7D964F0032F7A1 /* Response */,
 			);
 			path = Model;
@@ -465,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96C3CA72A82DA320032F7A1 /* SectionDetailRouter.swift in Sources */,
+				E94AD5D72A86CF63003BE7AD /* NYFaultModel.swift in Sources */,
 				E96C3C702A7C4F380032F7A1 /* SectionViewController.swift in Sources */,
 				E96C3C862A7D97780032F7A1 /* SectionService.swift in Sources */,
 				E96C3C602A7C4A4C0032F7A1 /* InteractorProtocol.swift in Sources */,
@@ -482,6 +500,7 @@
 				E96C3C772A7D8E0A0032F7A1 /* AppStoryboard.swift in Sources */,
 				E9584C4D2A78533900267C47 /* AppDelegate.swift in Sources */,
 				E9584C4F2A78533900267C47 /* SceneDelegate.swift in Sources */,
+				E94AD5D92A86CF89003BE7AD /* FaultModel.swift in Sources */,
 				E94AD5D22A86CA62003BE7AD /* AlertHelper.swift in Sources */,
 				E96C3C8D2A8026260032F7A1 /* Extension+UITableView.swift in Sources */,
 				E9D9E2962A842ED100FADB1E /* SectionDetailCell.swift in Sources */,
@@ -490,6 +509,7 @@
 				E96C3C6A2A7C4D500032F7A1 /* SectionInteractor.swift in Sources */,
 				E96C3C752A7D89230032F7A1 /* Extension+UIViewController.swift in Sources */,
 				E96C3C6C2A7C4D590032F7A1 /* SectionRouter.swift in Sources */,
+				E94AD5D52A86CF2C003BE7AD /* ResponseErrorModel.swift in Sources */,
 				E96C3C8F2A80275B0032F7A1 /* Extension+UITableViewCell.swift in Sources */,
 				E96C3C802A7D96EE0032F7A1 /* ResponseModel.swift in Sources */,
 				E96C3C722A7C51330032F7A1 /* ViewProtocol.swift in Sources */,
