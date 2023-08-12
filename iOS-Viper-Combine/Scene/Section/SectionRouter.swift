@@ -12,14 +12,9 @@ final class SectionRouter: RouterProtocol {
     
     class func createSection() -> UIViewController {
         let view: SectionViewController = SectionViewController.instantiate()
-
-        let presenter = SectionPresenter(router: .init())
-        let interactor = SectionInteractor(presenter: presenter)
-        presenter.interactor = interactor
-        
+        let presenter = SectionPresenter(router: .init(), interactor: .init())
         view.presenter = presenter
         presenter.view = view
-        
         
         return view
     }

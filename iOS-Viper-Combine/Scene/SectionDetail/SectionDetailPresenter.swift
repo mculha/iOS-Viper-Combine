@@ -11,7 +11,7 @@ import Moya
 
 final class SectionDetailPresenter: PresenterProtocol {
 
-    var interactor: SectionDetailInteractor!
+    var interactor: SectionDetailInteractor
     weak var view: SectionDetailViewController?
     var router: SectionDetailRouter
     
@@ -21,13 +21,14 @@ final class SectionDetailPresenter: PresenterProtocol {
     var sectionDetails: CurrentValueSubject<[SectionDetailModel], Never> = .init([])
     var error: PassthroughSubject<String, Never> = .init()
     
-    init(router: SectionDetailRouter) {
+    init(router: SectionDetailRouter, interactor: SectionDetailInteractor) {
         self.section = ""
         self.router = router
+        self.interactor = interactor
     }
-    
-    convenience init(router: SectionDetailRouter, section: String) {
-        self.init(router: router)
+
+    convenience init(router: SectionDetailRouter, interactor: SectionDetailInteractor, section: String) {
+        self.init(router: router, interactor: interactor)
         self.section = section
     }
     

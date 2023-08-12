@@ -13,11 +13,11 @@ protocol PresenterProtocol {
     associatedtype V: ViewProtocol
     associatedtype R: RouterProtocol
 
-    var interactor: I! { get }
+    var interactor: I { get }
     var view: V? { get }
     var router: R { get }
     
-    init(router: R)
+    init(router: R, interactor: I)
     
     func viewDidLoad()
     

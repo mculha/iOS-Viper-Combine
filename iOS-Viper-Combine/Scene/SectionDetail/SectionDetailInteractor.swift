@@ -11,11 +11,9 @@ import Moya
 
 final class SectionDetailInteractor: InteractorProtocol {
     
-    weak var presenter: SectionDetailPresenter?
     private let service: SectionServiceProtocol
 
-    init(presenter: SectionDetailPresenter) {
-        self.presenter = presenter
+    init() {
         self.service = SectionService()
     }
     

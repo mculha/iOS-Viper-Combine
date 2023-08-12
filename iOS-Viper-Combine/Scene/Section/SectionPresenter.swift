@@ -9,15 +9,16 @@ import Foundation
 import Combine
 
 final class SectionPresenter: PresenterProtocol {    
-    var interactor: SectionInteractor!
+    var interactor: SectionInteractor
     weak var view: SectionViewController?
     var router: SectionRouter
     
     private var store: Set<AnyCancellable> = .init()
     var sections: CurrentValueSubject<[SectionModel], Never> = .init([])
     
-    init(router: SectionRouter) {
+    init(router: SectionRouter, interactor: SectionInteractor) {
         self.router = router
+        self.interactor = interactor
     }
     
     func viewDidLoad() {

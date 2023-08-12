@@ -8,9 +8,5 @@
 import Foundation
 
 protocol InteractorProtocol {
-    associatedtype P: PresenterProtocol
     
-    var presenter: P? { get }
-    
-    init(presenter: P)
 }
